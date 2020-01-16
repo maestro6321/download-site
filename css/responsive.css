@@ -1,0 +1,189 @@
+@media screen and (min-device-width:769px) and (max-device-width:1024px){
+
+.main_masthead{
+	width: 100%;
+}
+.search{
+	padding-left: 0;
+	margin-left: 5px;
+}
+.logo{
+	display: none;
+}
+#main{
+	width: 100%;
+}
+.ourpost{
+	width: 380px;
+}
+.p-container {
+    width: 100%;
+}
+.p-post{
+	width: 700px;
+}
+.post{
+	width: 100%;
+}
+
+
+}
+
+
+@media screen and (min-device-width:768px) and (max-device-width:980px){
+.main_masthead{
+	width: 100%;
+}
+.search{
+	padding-left: 0;
+	margin-left: 5px;
+}
+.logo{
+	display: none;
+}
+#main{
+	width: 100%;
+}
+.ourpost{
+	width: 450px;
+}
+.p-container {
+    width: 100%;
+}
+.p-post{
+	width: 400px;
+}
+.post{
+	width: 450px;
+}
+.about {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+
+
+}
+
+@media screen and (min-device-width:600px) and (max-device-width:767px){
+.main_masthead{
+	width: 100%;
+}
+.search{
+	padding-left: 0;
+	margin-left: 5px;
+}
+.logo{
+	display: none;
+}
+#main{
+	width: 100%;
+}
+.ourpost{
+	width: 292px;
+}
+.p-container {
+    width: 100%;
+}
+.p-post{
+	width: 100%;
+}
+.post{
+	width: 100%;
+}
+.about {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: auto;
+    height: auto;
+}
+.social {
+    width: auto;
+    height: auto;
+    float: none;
+    margin: auto;
+	text-align: center;
+}    
+.social ul{
+	
+	justify-content: center;
+  	display: flex;
+}
+.footer-nav{
+	height: auto;
+}
+.left-sidebar{
+	display: none;
+}
+#header-nav ul >li {
+    width: 85px;
+    height: 101px;
+}
+}
+@media screen and (min-device-width:300px) and (max-device-width:600px){
+.main_masthead{
+	width: 100%;
+}
+.search{
+	padding-left: 0;
+	margin-left: 5px;
+}
+.search input {
+    padding: 8px 2px 8px 30px;
+}
+.menu-top .logo1{
+	display: none;
+}
+.logo{
+	display: none;
+}
+#main{
+	width: 100%;
+}
+.ourpost{
+	width: 292px;
+}
+.p-container {
+    width: 100%;
+}
+.p-post{
+	width: 100%;
+}
+.post{
+	width: 292px;
+}
+.about {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: auto;
+    height: auto;
+}
+.social {
+    width: auto;
+    height: auto;
+    float: none;
+    margin: auto;
+	text-align: center;
+}    
+.social ul{
+	
+	justify-content: center;
+  	display: flex;
+}
+.footer-nav{
+	height: auto;
+}
+.left-sidebar{
+	display: none;
+}
+#header-nav ul >li {
+    width: 75px;
+    height: 101px;
+}
+.ads_in{
+	width: 292px;
+	float: right;
+	overflow: hidden;
+}
+}
