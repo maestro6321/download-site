@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?php bloginfo("name"); wp_title(); ?></title>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css"> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/metro.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/tooltip.css">
+	<!--[if IE]>
+		<script type="text/javascript" src="js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scrollbar.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.easy-ticker.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/tooltip.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$("#metro-box").mCustomScrollbar({
+				horizontalScroll:true,
+			})
+		})
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('.demo').easyTicker({
+				direction: 'up',
+			});
+		});
+	</script>
+	<?php wp_head(); ?>
+</head>
+<body>
+
+	<div class="masthead , container-fluid">
+		<div class="main_masthead, container-fluid">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark"  role="navigation">
+				<div class="container">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<a class="navbar-brand" href="<?php echo home_url() ?>">Home</a>
+					<?php
+					wp_nav_menu( array(
+						'theme_location'    => 'primary',
+						'depth'             => 2,
+						'container'         => 'div',
+						'container_class'   => 'collapse navbar-collapse ',
+						'container_id'      => 'bs-example-navbar-collapse-1',
+						'menu_class'        => 'nav navbar-nav ',
+						'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback ',
+						'walker'            => new WP_Bootstrap_Navwalker(),
+					) );
+					?>
+				</div>
+
+			</nav>
+
+
+
+<!-- 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<?php wp_nav_menu( array( 'theme_location' => 'top-menu',"container"=>"" ) ); ?>
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Dropdown
+							</a>
+							<div class="dropdown-menu" >
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0" action="<?php bloginfo("home"); ?>/" method="get" >
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+			</nav> -->
+
+			
+
+
+		</div>
+	</div>
+	<div id="main" role="main">
+		<header>
+			<nav id="header-nav" role="navigation">
+				<ul>
+
+					<li style="background: #2c3e50"><a href="<?php echo home_url() ?>"><div class="fa fa-home fa-4x"></div><div class="nav-txt"> صفحه اصلی </div></a></li>
+					<li style="background: #27ae60"><a href="<?php echo home_url() ?>/category/software"><div class="fa fa-gears fa-4x"></div><div class="nav-txt">نرم افزار</div></a></li>
+					<li style="background: #f1c40f"><a href="<?php echo home_url() ?>/category/game"><div class="fa fa-gamepad fa-4x"></div><div class="nav-txt">بازی</div></a></li>
+					<li style="background: #3498db"><a href=""><div class="fa fa-pencil fa-4x"></div><div class="nav-txt">آموزش</div></a></li>
+					<li style="background: #95a5a6"><a href="#"><div class="fa fa-android fa-4x"></div><div class="nav-txt">اندروید</div></a></li>
+					<li style="background: #d35400"><a href="#"><div class="fa fa-code fa-4x"></div><div class="nav-txt">توسعه وب</div></a></li>
+					<li style="background: #8e44ad"><a href="#"><div class="fa fa-code-fork fa-4x"></div><div class="nav-txt">شبکه</div></a></li>
+				</ul>
+			</nav>
+			<!-- <div class="logo"><a href="<?php bloginfo("url"); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" title=""></a></div>	 -->		
+		</header>	
