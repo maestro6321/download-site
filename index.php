@@ -1,53 +1,64 @@
 <?php get_header(); ?>
 <div class="clear"></div>
-<?php include("inc/slider.php"); ?>
+<!-- <?php include("inc/slider.php"); ?> -->
 
-<div class="p-container">
-	<div class="p-post">
-		<div class="ourpost">
-			<h3>مطالب پیشنهادی</h3>
-			<div class="demo">
-				<ul>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-9 col-md-8">
+			<div class="row">
+				<div class="col-lg-7 col-md-12">
+					<div class="ourpost">
+						<h3>مطالب پیشنهادی</h3>
+						<div class="demo">
+							<ul>
 
-					<?php
+								<?php
 
-					$q=new WP_Query(
-						array("posts_per_page"=>14,"paged"=>c )
-					);
-					while ($q->have_posts()) {
-						$q->the_post();
+								$q=new WP_Query(
+									array("posts_per_page"=>14,"paged"=>c )
+								);
+								while ($q->have_posts()) {
+									$q->the_post();
+									?>
+
+									
+									<li><?php the_post_thumbnail(); ?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span><?php if(function_exists('the_views')) { the_views(); } ?></span></li>
+
+
+									<?php
+								}
+
+
+
+								
+								?>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-12">
+					<div class="ads_in"><ul><?php dynamic_sidebar( 'ali_middle_ads' ); ?></ul></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="p-post">
+					
+					
+					<div class="clear"></div>	
+
+
+					<?php 
+
+					while (have_posts()) {
+						the_post();
 						?>
 
-						
-						<li><?php the_post_thumbnail(); ?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span><?php if(function_exists('the_views')) { the_views(); } ?></span></li>
-
-
-					<?php
-				}
-
-
-
-					
-					?>
-				</ul>
-			</div>
-		</div>
-		<div class="ads_in"><ul><?php dynamic_sidebar( 'ali_middle_ads' ); ?></ul></div>
-		<div class="clear"></div>	
-
-
-		<?php 
-
-		while (have_posts()) {
-			the_post();
-			?>
-
-			<article class="post">
-				<header>
-					<div class="post-title">
-						<h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
-					</div>
-				</header>
+						<article class="post">
+							<header>
+								<div class="post-title">
+									<h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
+								</div>
+							</header>
 <!-- 					<div class="post-img">
 						<img src="<?php the_post_thumbnail(); ?>/images/firefox.jpg" alt="">
 					</div> -->
@@ -107,8 +118,13 @@
 				<?php wp_pagenavi(); ?>
 			</nav>
 		</div>
-		<?php get_sidebar(); ?>
 	</div>
+</div>
+<div class="col-lg-3 col-md-4" id="a25"><?php get_sidebar(); ?></div>
+</div>
+
+
+</div>
 </div>
 <div class="clear"></div>
 <?php get_footer(); ?>
